@@ -8,29 +8,39 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 </head>
-<body class="bg-green-50">
+<body class="bg-green-50 mx-auto ">
 
-    <header class="flex items-center justify-around px-6 py-3 border-b bg-green-700">
-        <div class="flex items-center gap-2">
-            <a class="text-lg font-bold text-white leading-tight">Green Earth</a>
-        </div>
 
-         <ul class="hidden md:flex items-center gap-6 text-white font-medium">
-            <li><a href="#about" >About</a></li>
-            <li><a href="#gallery" >Gallery</a></li>
-            <li><a href="#plant" >Plant a Tree</a></li>
-        </ul>
-
-        <div class="hidden md:flex items-center gap-4">
-          <div class="flex items-center justify-center gap-1 rounded-full bg-yellow-400 px-3 py-2 w-50">
-              <span class="text-sm font-bold text-green-800">Plant a Tree </span>
-          </div>
+    <header class="bg-green-700 border-b  mx-auto">
+        <div class="flex items-center justify-between px-6 py-3  mx-auto">
+                <a class="text-lg font-bold text-white leading-tight">Green Earth</a>
+                <ul class="hidden md:flex items-center gap-6 text-white text-sm">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#gallery">Gallery</a></li>
+                  <li><a href="#plant">Plant a Tree</a></li>
+                </ul>
+                <button class="flex items-center justify-center rounded-full bg-yellow-400 px-4 py-2 hover:bg-yellow-500 transition-colors">
+                    <span class="text-sm font-bold text-green-800">Plant a Tree</span>
+                </button>
         </div>
     </header>
+
     <!-- header end -->
 
+    <section class="relative bg-green-100 py-16 flex flex-col items-center text-center overflow-hidden">
+        <img src="assets/hero-leaf1.png" alt="Leaf" class="absolute left-0 top-1/2 -translate-y-1/2 h-40 md:h-72 object-contain">
+        <img src="assets/hero-leaf2.png" alt="Leaf" class="absolute right-0 top-1/2 -translate-y-1/2 h-40 md:h-72 object-contain">
 
+        <div class="z-10 max-w-xl px-2 ">
+                <h1 class="text-5xl md:text-4xl font-bold text-gray-900">Plant a Tree, Grow a Future</h1>
 
+                <p class="mt-1 text-gray-600 text-xs sm:text-sm leading-tight ">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+
+                <button class="mt-6 bg-yellow-400 hover:bg-yellow-500 text-green-800 font-semibold py-2 px-6 rounded-full transition"> Get Involved </button>
+        </div>
+    </section>
+
+    <!-- Banner end -->
 
     
 
