@@ -56,11 +56,17 @@ const showPlants = (categoryName) => {
           <button class="mt-3 bg-green-800 text-white py-2 rounded-full hover:bg-green-700 transition">Add to Cart</button>
         </div>
       `;
+
       card.querySelector("h3").addEventListener("click", () => openPlantModal(plant.id));
+
       card.querySelector("button.mt-3").addEventListener("click", () => {
-        cart.push(plant);
-        renderCart();
+        const confirmed = confirm(`${plant.name} has been added to the cart.`);
+        if (confirmed) {
+          cart.push(plant);
+          renderCart();
+        }
       });
+
       plantContainer.appendChild(card);
     });
 
