@@ -92,14 +92,14 @@
 
     
 <div class="w-screen flex justify-center bg-green-50 py-16">
-  <div class="campaign w-[1090px] flex flex-col items-center gap-4">
+  <div class="campaign w-full max-w-[1090px] flex flex-col items-center gap-4 px-4 sm:px-0">
     <h1 class="text-2xl font-bold text-center">About the Campaign</h1>
-    <div class="flex flex-row items-center gap-8 rounded-xl  ">
-      <div class="w-1/2 flex justify-center">
-        <img src="assets/about.png" alt="About" class="rounded-lg  object-cover">
+    <div class="flex flex-col lg:flex-row items-center gap-8 rounded-xl">
+      <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-1">
+        <img src="assets/about.png" alt="About" class="rounded-lg object-cover w-full h-auto">
       </div>
-      <div class="w-1/2">
-        <p class="text-gray-700 text-md  mb-4">
+      <div class="w-full lg:w-1/2 order-2 lg:order-2">
+        <p class="text-gray-700 text-md mb-4">
           Green Earth is a global tree plantation initiative dedicated to fighting climate change. 
           Since our start, we've planted over 500,000 trees worldwide. By joining our campaign, you help 
           restore forests, create habitats for wildlife, and combat global warming.
@@ -114,9 +114,11 @@
   </div>
 </div>
 
+
 <section class="bg-green-100 py-12">
-  <div class="max-w-6xl mx-auto text-center">
+  <div class="max-w-6xl mx-auto text-center px-4 md:px-0">
     <h2 class="text-2xl font-semibold text-gray-800 mb-10">Our Impact</h2>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-200 hover:scale-105 hover:shadow-xl hover:bg-green-200">
         <h3 class="text-3xl font-bold text-green-700">500K+</h3>
@@ -130,7 +132,6 @@
         <h3 class="text-3xl font-bold text-green-700">30+</h3>
         <p class="text-sm text-gray-600 mt-2">Countries Reached</p>
       </div>
-
     </div>
   </div>
 </section>
