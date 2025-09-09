@@ -11,77 +11,81 @@
 <body class="bg-green-50 mx-auto ">
 
 
-    <header class="bg-green-700 border-b  mx-auto">
-        <div class="flex items-center justify-between px-6 py-3 mt-auto mx-20">
-                <a class="text-lg font-bold text-white leading-tight">Green Earth</a>
-                <ul class="hidden md:flex items-center gap-6 text-white text-sm">
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#gallery">Gallery</a></li>
-                  <li><a href="#plant">Plant a Tree</a></li>
-                </ul>
-                <button class="flex items-center justify-center rounded-full bg-yellow-400 px-4 py-2 hover:bg-yellow-500 transition-colors">
-                    <span class="text-sm font-bold text-green-800">Plant a Tree</span>
-                </button>
-        </div>
-    </header>
+<header class="bg-green-700 border-b w-full">
+  <div class="flex items-center justify-between px-4 py-3 md:px-20">
+    <a class="text-lg font-bold text-white leading-tight">Green Earth</a>
+    <ul class="hidden md:flex items-center gap-6 text-white text-sm">
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#plant">Plant a Tree</a></li>
+    </ul>
+    <div class="flex items-center gap-2">
+      <button class="hidden md:flex items-center justify-center rounded-full bg-yellow-400 px-4 py-2 hover:bg-yellow-500 transition-colors">
+        <span class="text-sm font-bold text-green-800">Plant a Tree</span>
+      </button>
+      <div class="flex md:hidden items-center gap-2 px-4">
+        <button class="flex items-center justify-center rounded-full bg-yellow-400 px-3 py-1 hover:bg-yellow-500 transition-colors text-sm font-bold text-green-800">
+          Plant a Tree
+        </button>
+        <button id="menu-btn" class="text-white text-2xl focus:outline-none">
+          &#8942;
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden flex-col bg-green-600 text-white text-sm px-4 py-4 space-y-3">
+    <a href="#about" class="block">About</a>
+    <a href="#gallery" class="block">Gallery</a>
+    <a href="#plant" class="block">Plant a Tree</a>
+  </div>
+</header>
+
+
+
+
+
+
+
 
     <!-- header end -->
 
-    <section class="relative bg-green-100 py-16 flex flex-col items-center text-center overflow-hidden">
-        <img src="assets/hero-leaf1.png" alt="Leaf" class="absolute left-0 top-1/2 -translate-y-1/2 h-40 md:h-72 object-contain">
-        <img src="assets/hero-leaf2.png" alt="Leaf" class="absolute right-0 top-1/2 -translate-y-1/2 h-40 md:h-72 object-contain">
+<section class="relative bg-green-100 py-8 flex flex-col items-center text-center overflow-hidden">
+    <img src="assets/hero-leaf1.png" alt="Leaf" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 h-40 md:h-72 object-contain">
+    <img src="assets/hero-leaf2.png" alt="Leaf" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-40 md:h-72 object-contain">
+  <div class="z-10 max-w-xl px-4 sm:px-6">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900"> Plant a Tree, Grow a Future</h1>
 
-        <div class="z-10 max-w-xl px-2 ">
-                <h1 class="text-5xl md:text-4xl font-bold text-gray-900" style="font-size: 2.5em;">Plant a Tree, Grow a Future</h1>
+    <p class="mt-4 text-gray-600 text-sm sm:text-base leading-snug">Join our mission to plant 1 million trees and make the Earth greener for future generations. </p>
 
-                <p class="mt-1 text-gray-600 text-xs sm:text-sm leading-tight ">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
-
-                <button class="mt-6 bg-yellow-400 hover:bg-yellow-500 text-green-800 font-semibold py-2 px-6 rounded-full transition"> Get Involved </button>
-        </div>
-    </section>
-
+    <button class="mt-6 bg-yellow-400 hover:bg-yellow-500 text-green-800 font-semibold py-2 px-6 rounded-full transition"> Get Involved</button>
+  </div>
+</section>
     <!-- Banner end -->
+
+
 <div class="container  max-w-full flex flex-col gap-6 mt-8 pt-8 px-12  ">
   <h1 class="text-3xl font-bold text-center">Choose Your Trees</h1>
     <div id="loading-spinner" class="flex justify-center py-6">
       <div class="dot-falling"></div>
     </div>
       <div class=" mx-auto max-w-full   flex gap-6 px-8  ">
-          
-        
-
-          <aside id="leftsidebar" class="w-[200px] p-0 ">
-
+        <aside id="leftsidebar" class="w-[200px] p-0 ">
           <h2 class="text-xl font-bold text-black-700 mb-2 px-3">Categories</h2>
           <ul id="leftsidebar-menu" class="space-y-0.5 list-none m-0 p-0"></ul>
         </aside>
-
-
-
-<div class="flex-1 rounded-lg">
-  <div id="plant-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  ">
-  </div>
+        <div class="flex-1 rounded-lg">
+          <div id="plant-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  "></div>
+        </div>
+        <div class="w-[250px] rounded-lg p-4 bg-white flex flex-col gap-2 max-h-[48rem]">
+          <h3 class="font-bold text-lg mb-2">Your Cart</h3>
+          <ul id="cart-list" class="flex flex-col gap-1"></ul>
+          <div class="mt-2 font-bold flex justify-between border-t pt-2">
+              <span>Total:</span>
+              <span id="cart-total">৳0</span>
+          </div>
+        </div>
+      </div>
 </div>
-
-
-
-    <div class="w-[250px] rounded-lg p-4 bg-white flex flex-col gap-2 max-h-[48rem]">
-      <h3 class="font-bold text-lg mb-2">Your Cart</h3>
-      <ul id="cart-list" class="flex flex-col gap-1"></ul>
-      <div class="mt-2 font-bold flex justify-between border-t pt-2">
-        <span>Total:</span>
-        <span id="cart-total">৳0</span>
-      </div>
-    </div>
-
-     
-
-      </div>
-
-
-      
-
-  </div>
 
 
     
@@ -179,6 +183,15 @@
 
 <script src="leftsidebar.js"></script>
 
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  })
+</script>
 
 </body>
 </html>
